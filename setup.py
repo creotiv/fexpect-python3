@@ -1,7 +1,7 @@
 from setuptools import setup, find_packages
 from version import get_git_version
 
-requires = ['fabric','pexpect','shortuuid','setuptools']
+requires = ['Fabric3','pexpect','shortuuid','setuptools']
 
 setup(name='fexpect',
       version=get_git_version(),
@@ -22,7 +22,7 @@ setup(name='fexpect',
       include_package_data=True,
       zip_safe=False,
       install_requires=requires,
-      tests_require=['fabric>=1.0','pexpect','shortuuid'],
+      tests_require=['Fabric3>=1.12','pexpect','shortuuid'],
       test_suite="ilogue.fexpect.tests",
       )
 

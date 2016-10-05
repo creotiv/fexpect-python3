@@ -20,7 +20,7 @@ def wrapExpectations(cmd):
     # If mode not set explicitly, and this is run as a privileged user, 
     # later command from an unpriviliged user will fail due to the permissions
     # on /tmp/pexpect.py
-    fabric.api.put(pexpect_module,'/tmp/', mode=0777) 
+    fabric.api.put(pexpect_module,'/tmp/', mode=0o777) 
     fabric.api.put(StringIO(script),remoteScript)
     wrappedCmd = 'python '+remoteScript
     return wrappedCmd
